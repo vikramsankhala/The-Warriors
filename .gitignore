@@ -1,0 +1,12 @@
+# Extracted temp files (optional - remove to include)
+# *_extracted.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
