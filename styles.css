@@ -117,6 +117,12 @@ body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(
 .pro-equipment-card ul { list-style: none; padding: 0; margin: 0; font-size: 0.9rem; line-height: 1.7; color: var(--ink); }
 .pro-equipment-card li { padding-left: 1rem; position: relative; }
 .pro-equipment-card li::before { content: '•'; color: var(--gold); position: absolute; left: 0; }
+.sidearms-card { grid-column: 1 / -1; }
+.sidearm-item { margin-bottom: 1.5rem; padding-bottom: 1.2rem; border-bottom: 1px solid var(--mist); }
+.sidearm-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.sidearm-item strong { display: block; font-size: 0.95rem; color: var(--ink); margin-bottom: 0.6rem; }
+.sidearm-videos { display: flex; flex-direction: column; gap: 0.35rem; }
+.sidearm-videos .yt-link { margin-bottom: 0 !important; padding: 0.4rem 0.6rem; font-size: 0.8rem; }
 .pro-video-grid { display: flex; flex-direction: column; gap: 0.5rem; }
 .pro-yt-link { margin-bottom: 0.5rem !important; }
 
