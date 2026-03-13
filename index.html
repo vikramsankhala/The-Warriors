@@ -30,6 +30,12 @@
   .chat-send { padding: 0.7rem 1.2rem; background: var(--ink); color: var(--gold); border: none; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; cursor: pointer; }
   .chat-send:hover { background: var(--gold); color: var(--ink); }
   .chat-send:disabled { opacity: 0.5; cursor: not-allowed; }
+  /* Gentle Warriors attribution */
+  .gentle-warriors-banner { display: flex; align-items: center; justify-content: center; gap: 1.5rem; padding: 1.5rem 2rem; background: linear-gradient(135deg, #1a1a2e 0%, #2a2a4a 100%); color: var(--paper); border-bottom: 2px solid var(--gold); }
+  .gentle-warriors-banner .founder-photo { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold); }
+  .gentle-warriors-banner .attribution { font-family: 'Playfair Display', serif; font-size: 1rem; line-height: 1.5; max-width: 600px; }
+  .gentle-warriors-banner .attribution strong { color: var(--gold); }
+  @media (max-width: 600px) { .gentle-warriors-banner { flex-direction: column; text-align: center; } }
 </style>
 </head>
 <body>
@@ -50,6 +56,12 @@
   </ul>
   <button class="nav-toggle" aria-label="Menu">☰</button>
 </nav>
+
+<!-- GENTLE WARRIORS — Founder Attribution -->
+<div class="gentle-warriors-banner">
+  <img src="Vikram%20Sankhala.jpg" alt="Vikram Singh Sankhala" class="founder-photo">
+  <p class="attribution"><strong>For the Gentle Warriors</strong> — Techniques developed by Vikram Singh Sankhala — original as well as inspired by other systems.</p>
+</div>
 
 <!-- HERO -->
 <header class="site-header">
