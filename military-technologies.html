@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Military Technologies — The Warriors</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root { --ink: #1a1a2e; --paper: #f5f0e8; --cream: #faf7f0; --gold: #c9972a; --gold-light: #f0d080; --accent: #2a5a7a; --safe: #2a6b3a; --mist: #e8e0d0; }
+  .mt-hero { background: linear-gradient(135deg, var(--ink) 0%, #2a2a4a 100%); color: var(--paper); padding: 4rem 2rem 3rem; text-align: center; position: relative; overflow: hidden; }
+  .mt-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 30%, rgba(201,151,42,0.12) 0%, transparent 60%); }
+  .mt-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; position: relative; }
+  .mt-hero .eyebrow { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .mt-hero p { font-size: 1.05rem; color: rgba(245,240,232,0.85); max-width: 600px; margin: 1rem auto 0; position: relative; }
+  .mt-back { display: inline-block; margin-top: 1.5rem; padding: 0.6rem 1.2rem; background: transparent; color: var(--gold); border: 2px solid var(--gold); text-decoration: none; font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; transition: all 0.2s; }
+  .mt-back:hover { background: var(--gold); color: var(--ink); }
+  .mt-section { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+  .mt-section h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--ink); margin-bottom: 1rem; border-top: 2px solid var(--gold); padding-top: 2rem; }
+  .mt-section h2:first-of-type { border-top: none; padding-top: 0; }
+  .mt-card { background: white; border: 1px solid var(--mist); border-left: 4px solid var(--accent); padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 12px rgba(26,26,46,0.06); }
+  .mt-card.gold { border-left-color: var(--gold); }
+  .mt-card.green { border-left-color: var(--safe); }
+  .mt-card h3 { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+  .mt-card p { font-size: 0.95rem; color: var(--ink); line-height: 1.7; margin: 0.5rem 0; }
+  .mt-simple { background: rgba(42,90,122,0.06); border: 1px solid rgba(42,90,122,0.2); padding: 1rem 1.2rem; margin: 1rem 0; font-size: 0.9rem; line-height: 1.65; color: var(--accent); }
+  .mt-simple::before { content: '💡 Simple analogy: '; font-weight: 600; }
+  .mt-scenario { background: linear-gradient(135deg, #f8faf7 0%, #f0faf5 100%); border: 1px solid rgba(42,107,58,0.3); padding: 1.2rem 1.5rem; margin: 1rem 0; border-radius: 6px; }
+  .mt-scenario h4 { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--safe); margin-bottom: 0.5rem; }
+  .mt-case { background: #fff; border: 1px solid var(--mist); padding: 1.2rem; margin: 1rem 0; }
+  .mt-case .case-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 0.4rem; }
+  .mt-diagram { background: white; border: 1px solid var(--mist); padding: 1.5rem; margin: 1.5rem 0; text-align: center; overflow: hidden; }
+  .mt-diagram svg { max-width: 100%; height: auto; }
+  .mt-diagram-caption { font-size: 0.8rem; color: #4a5568; margin-top: 0.8rem; font-style: italic; }
+  .mt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+  .mt-sidenav { position: sticky; top: 2rem; }
+  .mt-sidenav a { display: block; padding: 0.5rem 0; font-size: 0.85rem; color: var(--slate); text-decoration: none; border-bottom: 1px solid var(--mist); transition: color 0.2s; }
+  .mt-sidenav a:hover { color: var(--gold); }
+  .mt-content { flex: 1; }
+  .mt-layout { display: flex; gap: 2rem; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  @media (max-width: 900px) { .mt-layout { flex-direction: column; } .mt-sidenav { position: static; } }
+</style>
+</head>
+<body>
+
+<nav class="main-nav">
+  <div class="nav-brand"><a href="index.html" style="color:inherit;text-decoration:none;">The Warriors</a> <span class="nav-badge">Nonprofit</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#techniques">Techniques</a></li>
+    <li><a href="index.html#professional-warriors">Pro Warriors</a></li>
+    <li><a href="military-technologies.html">Military Tech</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menu">☰</button>
+</nav>
+
+<div class="mt-hero">
+  <p class="mt-hero eyebrow">Educational &bull; Strategic Overview</p>
+  <h1>Military Technologies</h1>
+  <p>Next-generation defense systems — hypersonics, AI, directed energy, robotics, and surveillance. Explained in simple terms with illustrations, scenarios, and case studies.</p>
+  <a href="index.html" class="mt-back">← Back to The Warriors</a>
+</div>
+
+<div class="mt-layout">
+  <aside class="mt-sidenav" style="padding: 2rem 0 1rem; min-width: 200px;">
+    <strong style="font-size:0.7rem;letter-spacing:0.15em;color:var(--gold);">Contents</strong>
+    <a href="#hypersonics">Hypersonic Weapons</a>
+    <a href="#ai">AI &amp; Battlefield Brain</a>
+    <a href="#directed-energy">Directed Energy</a>
+    <a href="#counter-drone">Counter-Drone Systems</a>
+    <a href="#robotics">Robotics &amp; AI</a>
+    <a href="#surveillance">Surveillance</a>
+    <a href="#integration">System Integration</a>
+  </aside>
+
+  <main class="mt-content">
+    <div class="mt-section">
+      <p class="intro" style="margin-top:0;">This content draws from defense technology briefings and technical blueprints. It is presented for <strong>educational and strategic awareness</strong> — helping professionals understand the technologies shaping modern warfare. No classified or sensitive information is included.</p>
+
+      <!-- HYPERSONICS -->
+      <h2 id="hypersonics">1. Hypersonic Weapons — Engineering the Impossible</h2>
+      <p>Hypersonic flight means traveling at <strong>Mach 5+</strong> — five times the speed of sound. At sea level, that's roughly <strong>3,800 mph</strong> (6,100 km/h). A missile at this speed can cross continents in minutes.</p>
+
+      <div class="mt-diagram">
+        <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#c9972a;stop-opacity:0.3"/><stop offset="100%" style="stop-color:#c9972a;stop-opacity:0.8"/></linearGradient></defs>
+          <rect width="500" height="180" fill="#faf7f0"/>
+          <text x="250" y="25" fill="#1a1a2e" font-size="14" font-weight="600" text-anchor="middle">Speed Comparison</text>
+          <line x1="50" y1="100" x2="450" y2="100" stroke="#e8e0d0" stroke-width="2"/>
+          <rect x="60" y="70" width="60" height="40" fill="#e8e0d0" rx="4"/>
+          <text x="90" y="95" fill="#4a5568" font-size="11" text-anchor="middle">Car</text>
+          <text x="90" y="130" fill="#4a5568" font-size="9" text-anchor="middle">~70 mph</text>
+          <rect x="150" y="55" width="70" height="55" fill="#c9972a" fill-opacity="0.4" rx="4"/>
+          <text x="185" y="85" fill="#1a1a2e" font-size="11" text-anchor="middle">Jet</text>
+          <text x="185" y="118" fill="#1a1a2e" font-size="9" text-anchor="middle">~600 mph</text>
+          <rect x="250" y="40" width="80" height="70" fill="url(#g1)" rx="4"/>
+          <text x="290" y="70" fill="#1a1a2e" font-size="11" text-anchor="middle">Supersonic</text>
+          <text x="290" y="95" fill="#1a1a2e" font-size="9" text-anchor="middle">~1,500 mph</text>
+          <text x="290" y="118" fill="#1a1a2e" font-size="9" text-anchor="middle">(Mach 2)</text>
+          <rect x="360" y="25" width="80" height="85" fill="#c9972a" opacity="0.7" rx="4"/>
+          <text x="400" y="55" fill="#fff" font-size="11" text-anchor="middle">Hypersonic</text>
+          <text x="400" y="80" fill="#fff" font-size="9" text-anchor="middle">~3,800</text>
+          <text x="400" y="98" fill="#fff" font-size="9" text-anchor="middle">mph</text>
+          <text x="400" y="118" fill="#fff" font-size="9" text-anchor="middle">(Mach 5+)</text>
+          <path d="M60 100 L450 100" stroke="#c9972a" stroke-width="1" stroke-dasharray="4,2"/>
+          <text x="250" y="165" fill="#4a5568" font-size="10" text-anchor="middle">Hypersonic = 5× the speed of sound. Reaction time for defenders: seconds.</text>
+        </svg>
+        <div class="mt-diagram-caption">Visual speed comparison — hypersonic weapons leave minimal warning time.</div>
+      </div>
+
+      <div class="mt-simple">Think of a bullet train vs. a rocket. A commercial jet flies at ~600 mph. A hypersonic missile flies at ~3,800 mph. By the time radar detects it, it may already be too late to intercept.</div>
+
+      <div class="mt-card">
+        <h3>Case Study: LRHW "Dark Eagle"</h3>
+        <p>The U.S. Long-Range Hypersonic Weapon (LRHW), nicknamed "Dark Eagle," is a two-stage system: a solid-fuel booster accelerates the missile to hypersonic speed; then the <strong>Common Hypersonic Glide Body (C-HGB)</strong> separates and glides through the upper atmosphere at Mach 5–20. Unlike ballistic missiles, it can <em>maneuver</em> during flight — making it extremely difficult to track and intercept.</p>
+        <p><strong>Launch:</strong> Mobile transporter-erector-launcher (TEL). <strong>Materials:</strong> Carbon-carbon composites and ceramic matrix composites (CMCs) to withstand temperatures of thousands of degrees Celsius from friction.</p>
+      </div>
+
+      <div class="mt-scenario">
+        <h4>Scenario</h4>
+        <p><strong>Traditional missile:</strong> Fired from 1,000 miles away — follows a predictable arc. Defenders have 10–15 minutes to detect, track, and intercept.<br><strong>Hypersonic missile:</strong> Same distance — arrives in ~8 minutes. Can change course mid-flight. Defenders may have only seconds to react. Interception becomes nearly impossible with current systems.</p>
+      </div>
+
+      <div class="mt-card gold">
+        <h3>Why Materials Matter</h3>
+        <p>At hypersonic speeds, air friction causes extreme heat — surface temperatures can reach <strong>2,000°C+</strong>. Ceramic matrix composites (CMCs), carbon-carbon, and refractory metals (niobium, molybdenum, tungsten) with thermal barrier coatings are essential. Without them, the vehicle would melt.</p>
+      </div>
+
+      <!-- AI -->
+      <h2 id="ai">2. AI as the Battlefield Brain</h2>
+      <p>Artificial Intelligence is becoming the central nervous system of military operations — C4ISR (Command, Control, Communications, Computers, Intelligence, Surveillance, Reconnaissance). AI enhances situational awareness, speeds decision-making, and enables autonomous operations.</p>
+
+      <div class="mt-diagram">
+        <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="180" fill="#faf7f0"/>
+          <text x="250" y="25" fill="#1a1a2e" font-size="14" font-weight="600" text-anchor="middle">AI in C4ISR</text>
+          <ellipse cx="250" cy="95" rx="70" ry="45" fill="#1a1a2e" opacity="0.9"/>
+          <text x="250" y="92" fill="#c9972a" font-size="12" text-anchor="middle">AI Core</text>
+          <text x="250" y="108" fill="#c9972a" font-size="9" text-anchor="middle">Decision Engine</text>
+          <line x1="250" y1="65" x2="250" y2="35" stroke="#c9972a" stroke-width="2"/>
+          <line x1="250" y1="140" x2="250" y2="165" stroke="#c9972a" stroke-width="2"/>
+          <line x1="250" y1="95" x2="120" y2="95" stroke="#c9972a" stroke-width="2"/>
+          <line x1="250" y1="95" x2="380" y2="95" stroke="#c9972a" stroke-width="2"/>
+          <circle cx="250" cy="25" r="18" fill="#2a4a6b" opacity="0.8"/>
+          <text x="250" y="29" fill="#fff" font-size="8" text-anchor="middle">Sensors</text>
+          <circle cx="250" cy="165" r="18" fill="#2a4a6b" opacity="0.8"/>
+          <text x="250" y="169" fill="#fff" font-size="8" text-anchor="middle">Actuators</text>
+          <circle cx="120" cy="95" r="18" fill="#2a4a6b" opacity="0.8"/>
+          <text x="120" y="99" fill="#fff" font-size="8" text-anchor="middle">Intel</text>
+          <circle cx="380" cy="95" r="18" fill="#2a4a6b" opacity="0.8"/>
+          <text x="380" y="99" fill="#fff" font-size="8" text-anchor="middle">Control</text>
+          <text x="250" y="175" fill="#4a5568" font-size="12" text-anchor="middle">AI fuses data streams and enables rapid, autonomous decisions</text>
+        </svg>
+        <div class="mt-diagram-caption">AI integrates sensors, intelligence, and control to create a unified battlefield picture.</div>
+      </div>
+
+      <div class="mt-simple">Like a human brain processing sight, sound, and touch — AI combines radar, satellite, drone, and ground sensor data into one picture. Commanders can focus on strategy instead of sorting through thousands of data points.</div>
+
+      <div class="mt-card">
+        <h3>Applications</h3>
+        <p><strong>Distributed intelligence:</strong> AI runs on edge devices (low-SWaP — small, lightweight, low-power) so units can operate even when communication is degraded.<br><strong>Adaptive engagement:</strong> Algorithms learn from engagements and adapt tactics in real time.<br><strong>Autonomous operations:</strong> Unmanned systems can perform tasks without constant human supervision.</p>
+      </div>
+
+      <!-- DIRECTED ENERGY -->
+      <h2 id="directed-energy">3. Directed Energy Weapons — Precision at the Speed of Light</h2>
+      <p>Lasers and high-powered microwaves (HPM) offer a new paradigm: <strong>infinite ammunition</strong> (limited only by power), <strong>low cost per engagement</strong>, and <strong>precision</strong>. They are especially effective against drones and unguided rockets.</p>
+
+      <div class="mt-diagram">
+        <svg viewBox="0 0 500 180" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="180" fill="#faf7f0"/>
+          <text x="250" y="25" fill="#1a1a2e" font-size="14" font-weight="600" text-anchor="middle">Directed Energy: Laser vs. Drone</text>
+          <rect x="80" y="60" width="100" height="50" fill="#2a4a6b" rx="4"/>
+          <text x="130" y="88" fill="#fff" font-size="11" text-anchor="middle">Laser</text>
+          <text x="130" y="102" fill="#fff" font-size="9" text-anchor="middle">System</text>
+          <path d="M180 85 L320 85" stroke="#c9972a" stroke-width="3" stroke-linecap="round"/>
+          <path d="M320 85 L380 85" stroke="#c9972a" stroke-width="2" stroke-dasharray="4,2"/>
+          <ellipse cx="400" cy="85" rx="25" ry="18" fill="none" stroke="#6b2020" stroke-width="2"/>
+          <text x="400" y="90" fill="#6b2020" font-size="12" text-anchor="middle">Drone</text>
+          <text x="250" y="130" fill="#4a5568" font-size="11" text-anchor="middle">Beam travels at light speed. No projectile. No reload. Power limited.</text>
+          <text x="250" y="150" fill="#4a5568" font-size="10" text-anchor="middle">Effective vs. drones, rockets, mortar rounds. Requires thermal management.</text>
+        </svg>
+        <div class="mt-diagram-caption">Laser engagement — instant hit, no reload time.</div>
+      </div>
+
+      <div class="mt-simple">A traditional missile costs hundreds of thousands of dollars per shot. A laser can fire as long as it has power — like a flashlight vs. throwing bullets. Each "shot" costs pennies in electricity.</div>
+
+      <div class="mt-card">
+        <h3>Types</h3>
+        <p><strong>High-Energy Lasers (HEL):</strong> Fiber lasers, solid-state lasers. Used for naval defense (e.g., HELIOS), counter-drone, counter-rocket.</p>
+        <p><strong>High-Powered Microwaves (HPM):</strong> Disrupt or destroy electronics. Can disable drone swarms or electronic systems.</p>
+        <p><strong>Challenges:</strong> Atmospheric distortion (weather, dust), thermal management (lasers generate heat), power requirements.</p>
+      </div>
+
+      <!-- COUNTER-DRONE -->
+      <h2 id="counter-drone">4. Counter-Drone Systems — Layered Defense</h2>
+      <p>Drones are cheap, plentiful, and effective. A single operator can deploy a swarm. Counter-drone (C-UAS) systems use a <strong>layered approach</strong>: detect → classify → defeat.</p>
+
+      <div class="mt-diagram">
+        <svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="500" height="200" fill="#faf7f0"/>
+          <text x="250" y="25" fill="#1a1a2e" font-size="14" font-weight="600" text-anchor="middle">Layered C-UAS Defense</text>
+          <rect x="50" y="50" width="80" height="35" fill="#2a6b3a" opacity="0.7" rx="4"/>
+          <text x="90" y="72" fill="#fff" font-size="10" text-anchor="middle">1. Detect</text>
+          <rect x="150" y="50" width="80" height="35" fill="#2a6b3a" opacity="0.8" rx="4"/>
+          <text x="190" y="72" fill="#fff" font-size="10" text-anchor="middle">2. Classify</text>
+          <rect x="250" y="50" width="80" height="35" fill="#2a6b3a" opacity="0.9" rx="4"/>
+          <text x="290" y="72" fill="#fff" font-size="10" text-anchor="middle">3. Track</text>
+          <rect x="350" y="50" width="80" height="35" fill="#2a6b3a" rx="4"/>
+          <text x="390" y="72" fill="#fff" font-size="10" text-anchor="middle">4. Defeat</text>
+          <line x1="50" y1="100" x2="450" y2="100" stroke="#e8e0d0" stroke-width="1"/>
+          <text x="60" y="125" fill="#4a5568" font-size="9">Radar,</text>
+          <text x="60" y="138" fill="#4a5568" font-size="9">RF, EO/IR</text>
+          <text x="155" y="125" fill="#4a5568" font-size="9">Friend vs.</text>
+          <text x="155" y="138" fill="#4a5568" font-size="9">foe, type</text>
+          <text x="255" y="125" fill="#4a5568" font-size="9">Trajectory</text>
+          <text x="255" y="138" fill="#4a5568" font-size="9">prediction</text>
+          <text x="355" y="125" fill="#4a5568" font-size="9">EW, kinetic,</text>
+          <text x="355" y="138" fill="#4a5568" font-size="9">laser</text>
+          <text x="250" y="175" fill="#4a5568" font-size="11" text-anchor="middle">Multiple sensors + multiple defeat options = resilient defense</text>
+        </svg>
+        <div class="mt-diagram-caption">No single system can do everything — layered defense is key.</div>
+      </div>
+
+      <div class="mt-simple">Like a home security system: cameras detect, motion sensors classify, alert system tracks — and you choose the response (call police, turn on lights, etc.). C-UAS does the same for drones.</div>
+
+      <div class="mt-card green">
+        <h3>Defeat Mechanisms</h3>
+        <p><strong>Electronic warfare (EW):</strong> Jamming or spoofing GPS/control links — drone loses control or returns to home.<br><strong>Kinetic:</strong> Interceptor missiles, nets, or drones that physically collide.<br><strong>Directed energy:</strong> Lasers or microwaves to burn or disable electronics.</p>
+      </div>
+
+      <!-- ROBOTICS -->
+      <h2 id="robotics">5. Robotics &amp; AI — From Clockwork to Cognition</h2>
+      <p>Robotics evolved from simple programmed machines to systems that can <strong>learn</strong> and <strong>adapt</strong>. Deep Reinforcement Learning (DRL) and Generative AI enable robots to learn through trial and error, optimize in real time, and perform complex tasks in unstructured environments.</p>
+
+      <div class="mt-simple">Think of a factory robot that welded the same spot for 20 years vs. a robot that learns to pick up any object, navigate a warehouse, and adapt when something changes. The latter uses DRL and AI.</div>
+
+      <div class="mt-card">
+        <h3>Military Applications</h3>
+        <p><strong>UCAVs (Unmanned Combat Aerial Vehicles):</strong> Autonomous strike and reconnaissance.<br><strong>Ground robots:</strong> Logistics, reconnaissance, explosive ordnance disposal (EOD).<br><strong>Swarm coordination:</strong> Multiple drones or robots acting as a coordinated unit — like a flock of birds, but with a mission.</p>
+      </div>
+
+      <div class="mt-scenario">
+        <h4>Scenario</h4>
+        <p><strong>Traditional robot:</strong> Pre-programmed to follow a path. If an obstacle appears, it stops or fails.<br><strong>AI-powered robot:</strong> Learns from experience. Encounters obstacles, tries different approaches, learns which works. Next time, it navigates faster.</p>
+      </div>
+
+      <!-- SURVEILLANCE -->
+      <h2 id="surveillance">6. Military Surveillance — Multi-Agent Intelligence</h2>
+      <p>Modern surveillance uses <strong>Multi-Agent Systems (MAS)</strong> and <strong>Multi-Agent Reinforcement Learning (MARL)</strong>. Multiple sensors, platforms, and analytical nodes work together — like a team of scouts that learn to coordinate their search patterns.</p>
+
+      <div class="mt-simple">Instead of one big satellite doing everything, imagine a network of drones, ground sensors, and satellites — each contributing data. If one fails, the others adapt. MARL lets them learn to cover areas more efficiently over time.</div>
+
+      <div class="mt-card">
+        <h3>Evolution</h3>
+        <p>The history of military surveillance: from observation posts and balloons → aircraft and radar (WWII) → satellites and ELINT (Cold War) → networked ISR (Intelligence, Surveillance, Reconnaissance) and UAVs. Today: AI-driven, multi-agent, adaptive systems.</p>
+      </div>
+
+      <!-- INTEGRATION -->
+      <h2 id="integration">7. System Integration — MOSA &amp; Tactical Cloud</h2>
+      <p>All these technologies must work together. <strong>Modular Open Systems Approach (MOSA)</strong> enables flexible, interoperable systems. <strong>Tactical cloud-edge fusion</strong> brings computing power to the edge — where units operate — so they can function even when communication is degraded.</p>
+
+      <div class="mt-card">
+        <h3>Cross-Domain Operations</h3>
+        <p>The future of warfare is <strong>cross-domain</strong>: air, land, sea, space, and cyber operating as one. Hypersonics, AI, directed energy, robotics, and surveillance converge to create a joint force that is adaptive, fast, and integrated.</p>
+      </div>
+
+      <div class="principle-box" style="margin-top: 3rem;">
+        <p>"The goal is to equip you with the knowledge to navigate this rapidly evolving domain, enabling informed strategic planning and investment decisions. By mastering the convergence of hypersonics, autonomy, and directed energy, fused by robust architecture, you can ensure continued dominance in an era where agility and integration are paramount."</p>
+        <cite>— Transformative Military Technologies, Strategic Briefing</cite>
+      </div>
+
+      <div class="mt-section" style="padding-top: 2rem;">
+        <p style="font-size: 0.85rem; color: #4a5568;"><strong>Source materials:</strong> Engineering the Impossible, Transformative Military Technologies, U.S. Battlefield Technologies, Hypersonic Weapons Blueprint, Military Surveillance Systems, Robotics &amp; DRL/Generative AI, Solinexta Defence Technologies. © 2025 Vikram Singh Sankhala. Educational use only.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <p><strong>The Warriors · Not-for-Profit Citizen Self-Empowerment · 2025</strong><br>
+  Military Technologies content is for educational and strategic awareness. No classified information. Built on principles of clarity and accessibility.<br>
+  <a href="index.html" style="color:var(--gold);">← Back to The Warriors</a></p>
+</footer>
+
+<script>
+document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+  const links = document.querySelector('.nav-links');
+  links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+});
+</script>
+</body>
+</html>
